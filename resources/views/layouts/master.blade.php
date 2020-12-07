@@ -42,6 +42,10 @@ Author URL: http://w3layouts.com
                   <li class="nav-item active">
                       <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                   </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="{{url('/login')}}">Sign Up <span class="sr-only">(current)</span></a>
+                  </li>
+                  
                   
                   <li class="nav-item dropdown @@property__active">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -64,7 +68,7 @@ Author URL: http://w3layouts.com
                   </li>
               </ul>
               <div class="top-quote mt-lg-0">
-                  <a href="#buytheme" class="btn btn-style btn-primary"><span class="fa fa-home"></span>Sign Up</a>
+                  <a href="#buytheme" class="btn btn-style btn-primary"><span class="fa fa-home"></span>Search</a>
               </div>
               <!--/search-right-->
               <div class="search mx-3">

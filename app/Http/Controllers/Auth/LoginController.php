@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -37,4 +38,26 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+
+    public function loginuser(Request $request){
+        //return $request;
+         if (Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+            
+            return redirect()->intended(route('user.dashboard'));
+          }else{
+            $notification = array(
+                'messege' => 'Email/password Are Incorrect',
+                'alert-type' => 'error'
+            );
+            return Redirect()->back()->with($notification);
+          }
+
+               // if unsuccessful, then redirect back to the login with the form data
+          return redirect()->back()->withInput($request->only('email', 'remember'));
+
+    }
+
+    
 }

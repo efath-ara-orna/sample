@@ -31,7 +31,7 @@ public function insertshop(Request $request){
   	
 $shopinsert=Shop::insertGetId([
 
-'shopid'=>$request->shopid,
+'shopid'=>'Shop-'.$request->shopid,
 'shopName'=>$request->shopName,
 'floorNo'=>$request->floorNo,
 'blockNo'=>$request->blockNo,
@@ -132,7 +132,7 @@ public function deleteshop($id){
   $delete=shop::Where('id',$id)->delete();
   if($delete){
           $notification=array(
-                        'messege'=>' shop details Insert Successfully',
+                        'messege'=>' shop details deleted Successfully',
                         'alert-type'=>'success'
                          );
                      return redirect()->back()->with($notification);

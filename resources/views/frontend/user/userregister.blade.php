@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,37 +18,52 @@
 <!-- //web font -->
 </head>
 <body>
-<h1>User Login Form</h1>
-<div class="main-agileits">
-<!--form-stars-here-->
-        <div class="form-w3-agile">
-            <h2> Login form</h2>
-            <form action="{{url('/user/login/submit')}}" method="post">
-                @csrf
-                <div class="form-sub-w3">
-                    <input type="text" name="Username" placeholder="Customer  username " required="" />
-                <div class="icon-w3">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </div>
-                </div>
-                <div class="form-sub-w3">
-                    <input type="password" name="Password" placeholder="Password" required="" />
-                <div class="icon-w3">
-                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                </div>
-                </div>
-                <p class="p-bottom-w3ls">Are you new to Member?<a class="w3_play_icon1" href="{{url('/registration')}}/">  Register here</a></p>
-                
-                <div class="submit-w3l">
-                    <input type="submit" value="Login">
-                </div>
-            </form>
-        </div>
-<!--//form-ends-here-->
-</div>
 
-    <!-- //copyright --> 
-    <script type="{{asset('frontend')}}/text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<div id="small-dialog1" class="">
+					<div class="contact-form1">
+										<div class="contact-w3-agileits">
+										<h1>Registration Form</h1>
+											<form action="{{url('/user/register/submit')}}" method="post">
+												@csrf
+												<div class="form-sub-w3ls">
+													<input placeholder="User Name"  type="text" required="">
+													<div class="icon-agile">
+														<i class="fa fa-user" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="form-sub-w3ls">
+													<input placeholder="Email" class="mail" type="email" required="">
+													<div class="icon-agile">
+														<i class="fa fa-envelope-o" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="form-sub-w3ls">
+													<input placeholder="Password"  type="password" required="">
+													<div class="icon-agile">
+														<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="form-sub-w3ls">
+													<input placeholder="Confirm Password"  type="password" required="">
+													<div class="icon-agile">
+														<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+													</div>
+												</div>
+											</div>
+											<div class="login-check">
+								 			 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><p>I Accept Terms & Conditions</p></label>
+											</div>
+										<div class="submit-w3l">
+											<input type="submit" value="Register">
+										</div>
+										</form>
+					</div>	
+				</div>
+			</div>
+		
+	
+	 <script type="{{asset('frontend')}}/text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <!-- pop-up-box -->  
         <script src="{{asset('frontend')}}/js/jquery.magnific-popup.js" type="text/javascript"></script>
     <!--//pop-up-box -->
@@ -72,8 +85,4 @@
     </script>
 </body>
 </html>
-   
-
-
-
- 
+				

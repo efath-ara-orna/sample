@@ -59,3 +59,9 @@ Route::get('/admin/bill/delete/{id}', 'AdminController@deletebill');
 
 ///website route
 Route::get('/user/dashboard', 'WebsiteController@userdashboard')->name('user.dashboard');
+
+Route::get('/login', 'HomeController@userlogin')->name('user.login');
+Route::post('/user/login/submit', 'Auth\LoginController@loginuser');
+
+Route::get('/registration', 'HomeController@userregister');
+Route::post('/user/register/submit', 'Auth\RegisterController@create');

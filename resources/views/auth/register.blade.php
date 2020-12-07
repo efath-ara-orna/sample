@@ -1,77 +1,89 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+<!DOCTYPE html>
+<html>
+<head>
+<title>Credit Login / Register Form a Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Credit Login / Register Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{{asset('frontend')}}/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="{{asset('frontend')}}/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{asset('frontend')}}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="{{asset('frontend')}}///fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+<link href="{{asset('frontend')}}///fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+<!-- //web font -->
+</head>
+<body>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+<div id="small-dialog1" class="mfp-hide">
+                    <div class="contact-form1">
+                                        <div class="contact-w3-agileits">
+                                        <h3>Register Form</h3>
+                                            <form action="#" method="post">
+                                                <div class="form-sub-w3ls">
+                                                    <input placeholder="User Name"  type="text" required="">
+                                                    <div class="icon-agile">
+                                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-sub-w3ls">
+                                                    <input placeholder="Email" class="mail" type="email" required="">
+                                                    <div class="icon-agile">
+                                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-sub-w3ls">
+                                                    <input placeholder="Password"  type="password" required="">
+                                                    <div class="icon-agile">
+                                                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-sub-w3ls">
+                                                    <input placeholder="Confirm Password"  type="password" required="">
+                                                    <div class="icon-agile">
+                                                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="login-check">
+                                             <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><p>I Accept Terms & Conditions</p></label>
+                                            </div>
+                                        <div class="submit-w3l">
+                                            <input type="submit" value="Register">
+                                        </div>
+                                        </form>
+                    </div>  
                 </div>
-            </div>
-        </div>
+<!-- copyright -->
+    <div class="copyright w3-agile">
+        <p> © 2017 Credit Login / Register Form . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
     </div>
-</div>
-@endsection
+    <!-- //copyright --> 
+    <script type="{{asset('frontend')}}/text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- pop-up-box -->  
+        <script src="{{asset('frontend')}}/js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <!--//pop-up-box -->
+    <script>
+        $(document).ready(function() {
+        $('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+                                                                        
+        });
+    </script>
+</body>
+</html>

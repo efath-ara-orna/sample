@@ -37,4 +37,12 @@ class HomeController extends Controller
         $data=About::first();
       return view('frontend.about.aboutus',compact('data'));
     }
+
+    public function userlogin(){
+        return view('frontend.user.userlogin');
+    }
+
+    public function userregister(){
+        return view('frontend.user.userregister');
+    }
 }
